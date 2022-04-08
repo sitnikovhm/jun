@@ -8,7 +8,7 @@ yum install -y perl-ExtUtils-Embed
 yum install -y perl-Digest-MD5
 
 
-mkdir -p /opt/data1/passport-scans /opt/archive /opt/data1/passport-scans  /opt/data1/photos /opt/data1/signed-docs /opt/data1/nginx/ /opt/data1/nginx/logs  /opt/data1/nginx/php /opt/data1/nginx/src /opt/nginx/sbin /opt/nginx/ /opt/nginx/src /opt/data/passport-scans /opt/data/photos /opt/data/signed-docs
+mkdir -p /opt/data1/passport-scans /opt/archive /opt/nginx/php /opt/data1/passport-scans  /opt/data1/photos /opt/data1/signed-docs /opt/data1/nginx/ /opt/data1/nginx/logs  /opt/data1/nginx/php /opt/data1/nginx/src /opt/nginx/sbin /opt/nginx/ /opt/nginx/src /opt/data/passport-scans /opt/data/photos /opt/data/signed-docs
 
 cd /opt/nginx/src
 wget https://nginx.org/download/nginx-1.21.6.tar.gz
@@ -34,8 +34,8 @@ cd jun
 cp clear_old_scans.sh /opt/nginx/php
 cp webdav-extensions.php /opt/nginx/sbin
 cp -f nginx.conf /etc/nginx/
-useradd -p 1 -U nginx11
-echo "nginx11:1" | chpasswd
+useradd -p 1 -U nginx
+echo "nginx:1" | chpasswd
 chown -R nginx:nginx /opt/data1
 chown -R nginx:nginx /opt/archive
 chown -R nginx:nginx /opt/nginx
